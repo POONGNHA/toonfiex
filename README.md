@@ -1,6 +1,7 @@
 # toonfiex
 
-A new Flutter project.
+A new Flutter study project.
+started 23'07'12 ~
 
 ## Getting Started
 
