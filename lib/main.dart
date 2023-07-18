@@ -1,27 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:toonfiex/widget/button.dart';
 
 void main() {
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.black,
         body: Padding(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             vertical: 10,
             horizontal: 30,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Column(
@@ -42,7 +45,7 @@ class App extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
                   Text(
@@ -52,10 +55,10 @@ class App extends StatelessWidget {
                       color: Colors.white.withOpacity(0.7),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
-                  Text(
+                  const Text(
                     '\$5 149 482',
                     style: TextStyle(
                       fontSize: 48,
@@ -63,25 +66,31 @@ class App extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                          decoration: BoxDecoration(
-                              color: Colors.amber,
-                              borderRadius: BorderRadius.circular(55)),
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(
-                              vertical: 10,
-                              horizontal: 30,
-                            ),
-                            child: Text(
-                              'Transfer',
-                              style: TextStyle(fontSize: 20),
-                            ),
-                          )),
+                        decoration: BoxDecoration(
+                            color: Colors.amber,
+                            borderRadius: BorderRadius.circular(55)),
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(
+                            vertical: 10,
+                            horizontal: 30,
+                          ),
+                          child: Text(
+                            'Transfer',
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ),
+                      ),
+                      const Button(
+                          text: "request",
+                          bgColor: Colors.white,
+                          textColor: Colors.black)
                     ],
                   )
                 ],
